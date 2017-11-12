@@ -1,9 +1,9 @@
 (function(){
 
-  const apiSelic = "https://www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
-  const apiIpcaY = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
-  const apiIpcaM = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
-  const apiIbov = "https://www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
+  const apiSelic = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
+  const apiIpcaY = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
+  const apiIpcaM = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
+  const apiIbov = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
 
   init = () => {
     handleData(apiSelic)
