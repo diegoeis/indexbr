@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
   
   <style>
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body,html {
       background: #F5F6F8;
       width: 100%;
@@ -22,11 +26,15 @@
       margin: 0;
     }
 
-    .eco-index-number:after {
-      content: "% a.a."
-    }
-    .eco-index-number.eco-pts:after {
-      content: "pts"
+    .eco-dollar .eco-index-number:before {content: "R$ "}
+    .eco-ibov .eco-index-number:after {content: " pts"}
+    .eco-ipca .eco-index-number:after,
+    .eco-selic .eco-index-number:after {content: " % a.a."}
+    
+
+    .eco-container {
+      width: 1200px;
+      padding: 20px;
     }
 
     .eco-indexes {
@@ -41,49 +49,69 @@
 
     .eco-indexes > div {
       background: #fff;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+      box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
       padding: 50px 30px;
-      flex: 1 0 120px;
-      min-width: 220px;
+      flex: 1;
       margin-right: 30px;
       text-align: center;
+      transition: all .10s linear;
+      cursor: default;
     }
+
+    .eco-indexes > div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 9px 10px 5px rgba(0,0,0, .1);
+    }    
 
     .eco-indexes > div:last-child {
       margin-right: 0;
     }
 
     .eco-indexes > div h1 {
-      font-weight: 300;
+      font-weight: 700;
       font-size: 2.25rem;
-      line-height: 0;
       padding-bottom: 15px;
     }
 
     .eco-indexes > div span {
-      font-weight: 900;
+      font-weight: 300;
       font-size: 1.25rem;
-      line-height: 0;
     }    
 
     .eco-disclaimer {
       text-align: center;
       font-size: .87rem;
       font-weight: 300;
-      margin: 100px 0 0;
+      margin: 200px 0 0;
     }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 100;
+      color: #4A4A4A;
+      text-align: center;
+      padding-bottom: 200px
+    }
+
 
     @media screen and (max-width: 900px) {
       html, body {
         display: block;
       }
+      .eco-container {
+        width: auto;
+      }
       .eco-indexes {
-        padding: 20px;
         display: block;
         width: auto;
       }
       .eco-indexes > div {
         margin: 0 0 30px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        padding-bottom: 25px;
       }
       
     }
@@ -93,6 +121,9 @@
 <body>
 
   <div class="eco-container">
+
+    <h1>Indexadores Econômicos</h1>
+
     <div class="eco-indexes">
       <div class="eco-selic">
         <h1>Selic</h1>
@@ -107,6 +138,11 @@
       <div class="eco-ibov">
         <h1>IBOV</h1>
         <span class="eco-index-number eco-pts"></span>
+      </div>
+
+      <div class="eco-dollar">
+        <h1>USD:BRL</h1>
+        <span class="eco-index-number"></span>
       </div>
     </div>
     <p class="eco-disclaimer">Os dados são atualizados a cada 15 minutos enquanto o mercado estiver aberto. <br>Fonte: <a href="https://www.bloomberg.com/markets">Bloomberg</a>.</p>

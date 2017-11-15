@@ -1,14 +1,16 @@
 (function(){
 
-  const apiSelic = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
-  const apiIpcaY = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
-  const apiIpcaM = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
-  const apiIbov = "https://cors.io/?https://www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
+  const apiSelic = "https://www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
+  const apiIpcaY = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
+  const apiIpcaM = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
+  const apiIbov = "https://www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
+  const apiDollar = "https://www.bloomberg.com/markets/chart/data/1M/BRL:CUR"
 
   init = () => {
     handleData(apiSelic)
     handleData(apiIpcaY)
     handleData(apiIbov)
+    handleData(apiDollar)
   }
 
   handleData = (data) => {
@@ -25,6 +27,10 @@
         
         case data=apiIbov :
           showData(response.data.data_values, 'ibov')
+          break;
+        
+        case data=apiDollar :
+          showData(response.data.data_values, 'dollar')
           break;
       }
     })
