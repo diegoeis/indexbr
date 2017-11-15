@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um jeito fácil de conferir os principais Indexadores Econômicos do Brasil como SELIC, IPCA, Dólar, IBOVESPA">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Indexadores Econômicos Brasileiros</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
-  
+  <meta property="og:url" content="http://indexbr.in">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Confira os Indexadores Econônicos do Brasil">
+  <meta property="og:description" content="Valores atualizados da Selic, IPCA, Ibov e Dólar" name="description">
+  <meta property="og:image" content="https://images.pexels.com/photos/34204/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@diegoeis">
+  <meta name="twitter:title" content="Confira os Indexadores Econônicos do Brasil">
+  <meta name="twitter:description" content="Valores atualizados da Selic, IPCA, Ibov e Dólar">
+  <meta name="twitter:image" content="https://images.pexels.com/photos/34204/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb">
+
   <style>
     * {
       margin: 0;
@@ -152,5 +164,41 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="scripts.js"></script>
   
+
+  <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+    ;r.type="text/javascript";r.async=true
+    ;r.src="https://cdn.amplitude.com/libs/amplitude-3.8.0-min.gz.js"
+    ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+    e.amplitude.runQueuedFunctions()}else{
+    console.log("[Amplitude] Error: could not load SDK")}}
+    ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+    ;function s(e,t){e.prototype[t]=function(){
+    this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+    var o=function(){this._q=[];return this}
+    ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+    ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+    ;return this}
+    ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+    ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+    ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups","setSessionId"]
+    ;function v(e){function t(t){e[t]=function(){
+    e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+    for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+    e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+    ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+    ;e.amplitude=n})(window,document);
+  
+    amplitude.getInstance().init("530f02ba7e3a769d126bece8f004d21f", null, {
+      saveEvents: true, // If true, saves events to localStorage and removes them upon successful upload.
+      includeUtm: true, // If true, finds UTM parameters in the query string or the _utmz cookie, parses, and includes them as user properties on all events uploaded. 
+      includeReferrer: true, // If true, captures the referrer and referring_domain for each session, as well as the user's initial_referrer and initial_referring_domain via a setOnce operation.
+      saveParamsReferrerOncePerSession: true, // If true, then includeGclid, includeReferrer, and includeUtm will only track their respective properties once per session. 
+      includeGclid: true
+    });
+
+    amplitude.getInstance().logEvent('indexbr_pageview');
+  </script>
+
 </body>
 </html>
