@@ -1,10 +1,10 @@
 (function(){
 
-  const apiSelic = "https://www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
-  const apiIpcaY = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
-  const apiIpcaM = "https://www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
-  const apiIbov = "https://www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
-  const apiDollar = "https://www.bloomberg.com/markets/chart/data/1M/BRL:CUR"
+  const apiSelic = "https://cors-anywhere.herokuapp.com/www.bloomberg.com/markets/chart/data/1M/BZSTSETA:IND"
+  const apiIpcaY = "https://cors-anywhere.herokuapp.com/www.bloomberg.com/markets/chart/data/1M/BZPIIPCY:IND"
+  const apiIpcaM = "https://cors-anywhere.herokuapp.com/www.bloomberg.com/markets/chart/data/1M/BZPIIPCM:IND"
+  const apiIbov = "https://cors-anywhere.herokuapp.com/www.bloomberg.com/markets/chart/data/1M/IBOV:IND"
+  const apiDollar = "https://cors-anywhere.herokuapp.com/www.bloomberg.com/markets/chart/data/1M/BRL:CUR"
 
   init = () => {
     handleData(apiSelic)
