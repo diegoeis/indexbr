@@ -1,107 +1,116 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body,html {
-      background: #F5F6F8;
-      width: 100%;
-      height: 100%;
-      font: 100% Lato, Arial, Helvetica, Sans-serif;
-      color: #4A4A4A;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .eco-dollar .eco-index-number:before {content: "R$ "}
-    .eco-ibov .eco-index-number:after {content: " pts"}
-    .eco-ipca .eco-index-number:after,
-    .eco-selic .eco-index-number:after {content: " % a.a."}
-    
+body, html {
+  background: #F5F6F8;
+  width: 100%;
+  height: 100%;
+  font: 100% Lato, Arial, Helvetica, Sans-serif;
+  color: #4A4A4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
 
-    .eco-container {
-      width: 1200px;
-      padding: 20px;
-    }
+.eco-dollar .eco-index-number:before {
+  content: "R$ ";
+}
 
-    .eco-indexes {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-    }
+.eco-ibov .eco-index-number:after {
+  content: " pts";
+}
 
-    .eco-indexes > div {
-      background: #fff;
-      box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
-      padding: 50px 30px;
-      flex: 1;
-      margin-right: 30px;
-      text-align: center;
-      transition: all .10s linear;
-      cursor: default;
-    }
+.eco-ipca .eco-index-number:after,
+.eco-selic .eco-index-number:after {
+  content: " % a.a.";
+}
 
-    .eco-indexes > div:hover {
-      transform: scale(1.05);
-      box-shadow: 0 9px 10px 5px rgba(0,0,0, .1);
-    }    
+.eco-container {
+  width: 1200px;
+  padding: 20px;
+}
 
-    .eco-indexes > div:last-child {
-      margin-right: 0;
-    }
+.eco-indexes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    .eco-indexes > div h1 {
-      font-weight: 700;
-      font-size: 2.25rem;
-      padding-bottom: 15px;
-    }
+.eco-indexes > div {
+  background: #fff;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  padding: 50px 30px;
+  flex: 1;
+  margin-right: 30px;
+  text-align: center;
+  transition: all .10s linear;
+  cursor: default;
+}
 
-    .eco-indexes > div span {
-      font-weight: 300;
-      font-size: 1.25rem;
-    }    
+.eco-indexes > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 9px 10px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .eco-disclaimer {
-      text-align: center;
-      font-size: .87rem;
-      font-weight: 300;
-      margin: 200px 0 0;
-    }
+.eco-indexes > div:last-child {
+  margin-right: 0;
+}
 
-    h1 {
-      font-size: 5rem;
-      font-weight: 100;
-      color: #4A4A4A;
-      text-align: center;
-      padding-bottom: 200px
-    }
+.eco-indexes > div h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  padding-bottom: 15px;
+}
 
+.eco-indexes > div span {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
 
-    @media screen and (max-width: 900px) {
-      html, body {
-        display: block;
-      }
-      .eco-container {
-        width: auto;
-      }
-      .eco-indexes {
-        display: block;
-        width: auto;
-      }
-      .eco-indexes > div {
-        margin: 0 0 30px;
-      }
+.eco-disclaimer {
+  text-align: center;
+  font-size: .87rem;
+  font-weight: 300;
+  margin: 200px 0 0;
+}
 
-      h1 {
-        font-size: 3rem;
-        padding-bottom: 25px;
-      }
-      
-    }
+h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  color: #4A4A4A;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+@media screen and (max-width: 900px) {
+  html, body {
+    display: block;
+  }
+
+  .eco-container {
+    width: auto;
+  }
+
+  .eco-indexes {
+    display: block;
+    width: auto;
+  }
+
+  .eco-indexes > div {
+    margin: 0 0 30px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 25px;
+  }
+}
