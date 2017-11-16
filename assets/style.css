@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #2484fa;
+}
+
 body, html {
   background: #F5F6F8;
   width: 100%;
