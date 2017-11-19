@@ -4,57 +4,42 @@
   box-sizing: border-box;
 }
 
-a {
-  color: #2484fa;
-}
-
-body, html {
-  background: #F5F6F8;
+body,html {
+  background: #F8F8F8;
   width: 100%;
   height: 100%;
   font: 100% Lato, Arial, Helvetica, Sans-serif;
   color: #4A4A4A;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   padding: 0;
   margin: 0;
 }
 
-.eco-dollar .eco-index-number:before {
-  content: "R$ ";
-}
-
-.eco-ibov .eco-index-number:after {
-  content: " pts";
-}
-
+.eco-cifrao .eco-index-number:before {content: "R$ "}
+.eco-ibov .eco-index-number:after {content: " pts"}
 .eco-ipca .eco-index-number:after,
-.eco-selic .eco-index-number:after {
-  content: " % a.a.";
-}
+.eco-selic .eco-index-number:after {content: " % a.a."}
+
 
 .eco-container {
-  width: 1200px;
   padding: 20px;
+  width: 100%;
 }
 
 .eco-indexes {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
 }
 
 .eco-indexes > div {
   background: #fff;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.25);
   padding: 50px 30px;
-  flex: 1;
-  margin-right: 30px;
+  flex: 1 0 100px;
+  min-width: 200px;
+  margin: 0 1%;
   text-align: center;
   transition: all .10s linear;
   cursor: default;
@@ -62,29 +47,30 @@ body, html {
 
 .eco-indexes > div:hover {
   transform: scale(1.05);
-  box-shadow: 0 9px 10px 5px rgba(0, 0, 0, 0.1);
-}
+  box-shadow: 0 10px 30px 5px rgba(0,0,0, .15);
+}    
 
-.eco-indexes > div:last-child {
-  margin-right: 0;
-}
+.eco-indexes > div:first-child {margin-left: 0;}
+.eco-indexes > div:last-child {margin-right: 0;}
 
 .eco-indexes > div h1 {
   font-weight: 700;
   font-size: 2.25rem;
+  padding: 0;
   padding-bottom: 15px;
 }
 
 .eco-indexes > div span {
   font-weight: 300;
   font-size: 1.25rem;
-}
+}    
 
 .eco-disclaimer {
   text-align: center;
   font-size: .87rem;
   font-weight: 300;
-  margin: 200px 0 0;
+  line-height: 2;
+  margin: 15vh 0 0;
 }
 
 h1 {
@@ -92,29 +78,32 @@ h1 {
   font-weight: 100;
   color: #4A4A4A;
   text-align: center;
-  padding-bottom: 200px;
+  padding: 15vh 0
 }
+
 
 @media screen and (max-width: 900px) {
   html, body {
     display: block;
   }
-
   .eco-container {
     width: auto;
   }
-
   .eco-indexes {
     display: block;
     width: auto;
   }
-
   .eco-indexes > div {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
+  }
+
+  .eco-indexes > div h1 {
+    font-size: 2rem
   }
 
   h1 {
-    font-size: 3rem;
-    padding-bottom: 25px;
+    font-size: 2rem;
+    padding: 5vh 0;
   }
+  
 }
